@@ -1,0 +1,837 @@
+/* font-family: 'Raleway', sans-serif;
+font-family: 'Montserrat', sans-serif; */
+
+/*----------VARIABLES----------*/
+:root {
+  --clr-primary: #fff;
+  --clr-secondary: #fc0404;
+  --clr-heading: #362f2d;
+  --clr-dark-btn: #1f1f1f;
+
+  --spacer: 2rem;
+}
+
+/*---------- CSS RESET----------*/
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+  color: inherit;
+  display: inline-block;
+}
+
+a:hover {
+  border-bottom: 2px solid var(--clr-secondary);
+  transition: border 0.5s;
+}
+
+form,
+input,
+button,
+button:focus,
+select {
+  font-family: inherit;
+  border: 0;
+  font: inherit;
+  margin: 0 0.2rem;
+}
+
+button:focus,
+button:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+button:active {
+  transform: translateY(4px) !important;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+.cancel-margin {
+  margin: 0 !important;
+}
+
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+  -webkit-tap-highlight-color: transparent; /* For some Androids */
+}
+
+/*---------- General Styles----------*/
+
+body {
+  font-family: "Raleway", sans-serif;
+  background-color: var(--clr-primary);
+  margin: 0 auto;
+  max-width: 1140px;
+  padding: 0.5rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif;
+}
+
+.btn {
+  padding: 0.7rem 1rem;
+  outline: 0;
+  border-radius: 25px;
+}
+
+.btn-dark {
+  background-color: var(--clr-dark-btn);
+  color: var(--clr-primary);
+  cursor: pointer;
+}
+
+.center-text {
+  text-align: center;
+}
+
+/*---------- Layout Styles----------*/
+
+.split {
+  display: flex;
+  flex-direction: column;
+}
+
+.split > * {
+  flex-basis: 100%;
+}
+
+.split > * + * {
+  margin-left: 1rem;
+}
+
+@media (min-width: 40em) {
+  .split {
+    flex-direction: row;
+  }
+
+  .container {
+    padding: 0 3rem;
+  }
+}
+
+/*---------- Home Page Styles----------*/
+
+section {
+  margin: var(--spacer) 0;
+}
+
+.openMenu,
+.mainMenu,
+.closeMenu {
+  display: none;
+  cursor: pointer;
+}
+
+.home-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.nav-primary ul {
+  display: flex;
+}
+
+.nav-primary ul li {
+  margin-right: 0.8rem;
+}
+
+.user-setup a:first-child {
+  margin-right: 0.5rem;
+}
+
+.user-setup a:hover {
+  border: 2px solid transparent;
+
+}
+
+
+.hero {
+  background-image: url(/assets/bgf.png);
+  background-size: cover;
+  padding: 3rem 0;
+}
+
+.hero_content {
+  color: var(--clr-primary);
+}
+
+.hero_content h1 {
+  width: 60%;
+  font-size: 2.5em;
+  margin: 2rem 0;
+}
+
+.hero_content p {
+  margin-bottom: 2rem;
+}
+
+.hero_content a:hover {
+  border-bottom: 2px solid var(--clr-primary);
+}
+
+.home_mailbox {
+  margin-bottom: 6rem;
+}
+
+.home_mailbox input {
+  border: 0;
+  border-radius: 25px;
+  height: 2.4rem;
+  width: 20rem;
+  padding: 0 2rem;
+}
+
+.home_mailbox button {
+  margin-left: -4rem;
+}
+
+.home_stats {
+  margin-bottom: var(--spacer);
+}
+
+.stats_box {
+  margin-top: -4rem;
+  background-color: #fff;
+  min-width: 30rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 2rem;
+  box-shadow: 0px 1rem 1.5rem rgba(0, 0, 0, 0.2);
+}
+
+.home_stats h2 {
+  font-weight: 900;
+  font-size: 2rem;
+  padding-bottom: 0.3em;
+}
+
+.home_stats p {
+  font-weight: 500;
+  font-size: 1em;
+  letter-spacing: 0.1rem;
+  line-height: 1.8;
+}
+
+.home_stats a {
+  color: var(--clr-secondary);
+  letter-spacing: 0.1rem;
+}
+
+.home_stats a:after {
+  content: " \2192";
+  font-size: 1.5rem;
+}
+
+.home_searchbar {
+  position: relative;
+
+  padding: 0.8rem 2rem;
+  display: flex;
+  border: 2px solid var(--clr-dark-btn);
+  border-radius: 24px;
+  margin: 3rem auto;
+}
+
+.home_searchbar select,
+.home_searchbar input {
+  font-size: 1em;
+}
+
+.home_searchbar .inputbar {
+  flex-basis: 70%;
+}
+
+.search_btn {
+  position: absolute;
+  right: -23px;
+  top: 0;
+
+  width: 5%;
+}
+
+.home_searchbar .inputbar::placeholder {
+  padding-left: 0.5rem;
+}
+
+.selectbar {
+  flex-basis: 20%;
+}
+
+.home_info_cards {
+  margin: 5rem 0;
+}
+.info_card img {
+  width: 15%;
+}
+
+.info_card h3 {
+  color: var(--clr-heading);
+  padding: 0.5rem 0;
+  width: 10%;
+}
+
+.info_card p {
+  letter-spacing: 0.1rem;
+  width: 88%;
+}
+
+.home_testi_header h2 {
+  font-size: 2em;
+  text-align: center;
+  padding: 0 15rem;
+}
+
+.home_testi_header p {
+  text-align: center;
+  padding: 1rem 5rem;
+  line-height: 1.6;
+}
+
+.testi_main {
+  margin: 3rem 0;
+}
+
+blockquote {
+  margin: 0;
+  padding: 0;
+  border: none;
+  position: relative;
+  font-size: 1.1rem;
+  width: 50%;
+  font-weight: 200;
+}
+
+.testi_quote::before {
+  position: absolute;
+  font-size: 8rem;
+  content: "\201C";
+  color: var(--clr-secondary);
+  top: -60px;
+  left: -10px;
+}
+
+.testi_quote::after {
+  position: absolute;
+  font-size: 8rem;
+  content: "\201E";
+  color: var(--clr-secondary);
+  top: -50px;
+  right: -41px;
+}
+
+.testi_person {
+  margin-top: 2rem;
+  display: flex;
+}
+
+.testi_person img {
+  width: min(20%, 100px);
+  width: 100px;
+  
+
+  border: 1px solid transparent;
+  border-radius: 25px;
+  margin-right: 0.5rem;
+}
+
+.person_title {
+  font-weight: 900;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 2rem;
+}
+
+.person_desig {
+  color: var(--clr-secondary);
+}
+
+.testi_nav a {
+  border: 1px solid black;
+  border-radius: 25px;
+  font-size: 1.5rem;
+  padding: 0.2rem 1.2rem;
+}
+
+.nav-buttons {
+  display: flex;
+}
+
+.testi_nav {
+  margin-top: 3rem;
+}
+
+.home_cta {
+  display: flex;
+  flex-direction: column;
+  margin: 3rem auto;
+  padding: 3rem 0;
+  background-color: var(--clr-secondary);
+}
+
+.home_cta h2 {
+  color: var(--clr-primary);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.home_cta button {
+  margin: 0 auto;
+  font-size: 1.2rem;
+}
+
+.home_cta {
+  background: linear-gradient(to right, #ff1447, #fd0404da),
+    url("/assets/cta_bg.png");
+
+  background-size: cover;
+  background-position: left center;
+}
+
+.links-a li:first-child,
+.links-b li:first-child,
+.links-c li:first-child,
+.links-d li:first-child,
+.links-e li:first-child {
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.links-a li,
+.links-b li,
+.links-c li,
+.links-d li,
+.links-e li {
+  margin-bottom: 0.2rem;
+  font-size: 0.9rem;
+}
+
+.footer-logo {
+  margin-bottom: 1rem;
+}
+
+.fas {
+  margin-right: 0.5rem;
+}
+
+.footer-links {
+  margin: 2rem 0;
+}
+
+.footer-mini {
+  margin: 0.2rem 0;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #8080805c;
+  padding: 0.3rem 0;
+}
+
+.mini-a {
+  display: flex;
+  align-items: center;
+}
+
+.mini-a p {
+  margin-right: 2rem;
+}
+
+.mini-b ul {
+  display: flex;
+}
+.mini-b ul li {
+  margin-right: 1rem;
+}
+
+hr {
+  color: inherit;
+}
+
+/*---------- MEDIA QUERIES----------*/
+
+@media (max-width: 770px) {
+  /* .home-nav {
+    flex-direction: column;
+  } */
+
+  .home-nav > * {
+    margin: 0.5rem 0;
+  }
+
+  .split {
+    flex-direction: column;
+  }
+
+  .hero_content h1 {
+    width: 100% !important;
+    padding: 0;
+  }
+
+  .home_stats h2 {
+    margin-top: 3rem;
+  }
+
+  .hero {
+    padding: 2rem 0 !important;
+    background-position: 80%;
+  }
+
+  .hero_content p {
+    margin-bottom: 2rem;
+    width: 50%;
+  }
+
+  .search_btn {
+    width: 9% !important;
+  }
+
+  .home_info_cards .split {
+    flex-direction: row !important;
+  }
+
+  .info_card p {
+    width: 100% !important;
+  }
+
+  .info_card img {
+    width: 25% !important;
+  }
+
+  .home_testi_header h2 {
+    padding: 0 !important;
+  }
+
+  .home_testi_header p {
+    padding: 1rem 0 !important;
+  }
+
+  blockquote {
+    width: 100% !important;
+  }
+
+  .home_cta h2 {
+    padding: 0 0.5rem !important;
+  }
+
+  .links-a {
+    margin-left: 1rem !important;
+  }
+
+  .links-a,
+  .links-b,
+  .links-c,
+  .links-d {
+    margin-bottom: 1rem;
+  }
+
+  .testi_nav {
+    width: 50%;
+  }
+
+
+  .testi_person img {
+    width: 60px;
+  }
+
+
+}
+
+/* Original */
+@media (max-width: 360px) {
+  .hero {
+    padding: 1rem 1rem !important;
+    background-position: 0 !important;
+  }
+
+  .hero_content h1 {
+    font-size: 1.5rem !important;
+    text-align: center !important;
+  }
+
+  .hero_content p {
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  .home_mailbox input {
+    width: 80% !important;
+    margin-left: 1rem !important;
+    padding: 0 1rem !important;
+  }
+
+  ::placeholder {
+    font-size: 0.8rem !important;
+  }
+
+  .stats_box {
+    min-width: 0 !important;
+  }
+
+  .home_stats h2 {
+    margin-top: 1rem !important;
+    font-size: 1.5rem !important;
+  }
+
+  .search_btn {
+    width: 14% !important;
+    right: -15 !important;
+  }
+
+  .home_searchbar {
+    margin: 3rem 1rem !important;
+  }
+
+  .split {
+    display: block !important;
+    text-align: center !important;
+    padding: 0 2rem !important;
+  }
+
+  .info_card img {
+    width: auto !important;
+    margin: 0.6rem 0 !important;
+  }
+
+  .info_card h3 {
+    width: auto !important;
+  }
+
+  .info_card {
+    margin: 1rem 0 !important;
+  }
+
+  .home_testi_header h2 {
+    font-size: 1.5rem !important;
+  }
+
+  .testi_quote::after {
+    right: 0 !important;
+    top: -63px !important;
+  }
+
+  blockquote {
+    font-size: 1rem !important;
+  }
+
+  .nav-buttons {
+    display: block !important;
+  }
+
+  .testi_nav {
+    margin-top: 1rem !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  .footer-logo {
+    margin-left: 4rem !important;
+  }
+
+  .home_cta {
+    margin: 0 0 !important;
+  }
+
+  .testi_person img {
+    width: 60px;
+  }
+
+}
+
+@media only screen and (max-width: 600px) and (min-width: 200px) {
+  .nav-primary,
+  .user-setup {
+    display: none;
+  }
+
+  .mainMenu {
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: top 1s ease;
+    display: none;
+    background: linear-gradient(to right, #ffffff, #ffffff),
+      url("/assets/logo.png");
+    background-repeat: no-repeat;
+  }
+
+  .mainMenu ul li {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+  }
+
+  .mainMenu ul li:nth-child(1) {
+    margin-top: 1rem;
+  }
+  .mainMenu .closeMenu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: red;
+  }
+  .openMenu {
+    display: block;
+    position: absolute;
+    right: 20px;
+    font-size: 2rem;
+    color: red;
+  }
+
+  .hero {
+    padding: 1rem 1rem !important;
+    background-position: 0 !important;
+  }
+
+  .hero_content h1 {
+    font-size: 1.5rem !important;
+    text-align: center !important;
+  }
+
+  .hero_content p {
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  .home_mailbox input {
+    width: 80% !important;
+    margin-left: 1rem !important;
+    padding: 0 1rem !important;
+  }
+
+  ::placeholder {
+    font-size: 0.8rem !important;
+  }
+
+  .stats_box {
+    min-width: 0 !important;
+  }
+
+  .home_stats h2 {
+    margin-top: 1rem !important;
+    font-size: 1.5rem !important;
+  }
+
+  .search_btn {
+    width: 14% !important;
+    right: -15 !important;
+  }
+
+  .home_searchbar {
+    margin: 3rem 1rem !important;
+  }
+
+  .split {
+    display: block !important;
+    text-align: center !important;
+    padding: 0 2rem !important;
+  }
+
+  .info_card img {
+    width: 8% !important;
+    margin: 0.6rem 0 !important;
+  }
+
+  .info_card h3 {
+    width: auto !important;
+  }
+
+  .info_card {
+    margin: 1rem 0 !important;
+  }
+
+  .home_testi_header h2 {
+    font-size: 1.5rem !important;
+  }
+
+  .testi_quote::after {
+    right: 0 !important;
+    top: -63px !important;
+  }
+
+  blockquote {
+    font-size: 1rem !important;
+  }
+
+  .nav-buttons {
+    display: block !important;
+  }
+
+  .testi_nav {
+    margin-top: 1rem !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  .home_cta {
+    margin: 0 0 !important;
+  }
+
+  .footer-mini,
+  .mini-a,
+  .mini-b {
+    flex-direction: column !important;
+  }
+
+  .mini-a p,
+  .mini-a img,
+  .mini-a select {
+    margin: 0.5rem 0 !important;
+  }
+
+  .mini-b ul {
+    justify-content: space-around !important;
+  }
+
+  .home_mailbox input {
+    margin-left: 0 !important;
+  }
+
+  .footer-logo {
+    text-align: center !important;
+  }
+
+  .home_mailbox button {
+    margin-left: -6rem !important;
+  }
+
+  .testi_person img {
+    width: 60px;
+  }
+}

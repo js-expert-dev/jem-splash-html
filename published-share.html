@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jemsplash -- Published - Share</title>
+  <link rel="stylesheet" href="assets/css/published-share.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,800;1,700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+
+  <script src="assets/js/main.js"></script>
+
+
+</head>
+   
+<body>
+  <header>
+    <div class="container">
+      <a href="index.html">
+        <img class="site-logoo" src="assets/logo.png" alt="Jemsplash site logo" />
+      </a>
+      <div class="home-nav">
+        <a style="border: 2px solid transparent;" href="index.html">
+          <img class="site-logo" src="assets/logo.png" alt="Jemsplash site logo" />
+        </a>   
+        <div class="openMenu invites"><i class="fa fa-bars"></i></div>
+
+
+        <nav class="nav-primary">
+          <ul class="">
+            <li> <a href="published-product.html"><i class="fa fa-gift" aria-hidden="true"></i>
+              Products</a></li>
+            <li><i class="fas fa-user-friends"></i> <a href="customer.html">Customers</a></li>
+            <li> <a href=""><i class="fas fa-paste"></i>Posts</a></li>
+            <li> <a href="analytics.html"><i class="fas fa-chart-bar"></i>Analytics</a></li>
+
+        </nav>
+
+
+        <div class="user-info">
+          <div class="user-avatar">
+            <img src="assets/taylor_pic.jpg" alt="user avatar placeholder">
+          </div>
+          <div class="user-name">
+            <p>Taylor.K <i class="fas fa-angle-down"></i>
+            </p>
+          </div>
+          
+        </div>
+        
+      </div>
+
+      <div class="mainMenu">
+        <img src="assets/logo.png" alt="Jemsplash site logo" />
+        <ul>
+          <li> <a href="published-product.html"><i class="fa fa-gift" aria-hidden="true"></i>
+            Products</a></li>
+          <li class="active"><i class="fas fa-user-friends"></i> <a href="customer.html">Customers</a></li>
+          <li> <a href="#"><i class="fas fa-paste"></i>Posts</a></li>
+          <li> <a href="analytics.html"><i class="fas fa-chart-bar"></i>Analytics</a></li>
+          <li><a href="login.html" class="btn btn-dark btn-arrow ">Logout</a> </li>
+            <div class="closeMenu"><i class="fa fa-times"></i></div>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+
+    <section>
+      <div class="container">
+
+        <div class="workflow-nav">
+          <ul class="workflow-nav-menu">
+            <li><a href="published-product.html"> Products</a></li>
+            <li><a href="published-checkout.html">Checkout</a> </li>
+            <li class="active"><a href="published-share.html">Share</a> </li>
+            
+            <div class="workflow-nav-btns">
+             <div class="workflow-nav-share">
+              <p>http://jems.com.gh3</p>
+             </div>
+             <button class="btn ">Publish</button>
+              <button class="btn btn-red">Save Changes</button>
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+    <!-- Share Product aside section -->
+
+    
+<section>
+  <div class="container">
+    <div class="flex-box-parent-box">
+      <div class="flex-column-one">
+        <p class="h1">Share your product</p>
+        
+        <p class="product-tagline">Social links</p>
+        <div class="social-links-box">
+
+          <div class="social-links-fb">
+            <i class="fab fa-facebook-f fa-lg"></i>
+            <button>Share</button>
+          </div>
+
+          <div class="social-links-tweet">
+            <i class="fab fa-twitter fa-lg"></i>
+            <button>Tweet</button>
+          </div>
+
+          <div class="social-links-url">
+            <i class="fas fa-file-medical fa-lg"></i>
+            <button>Copy to URL</button>
+          </div>
+
+        </div>
+
+        <div class="embed-section">
+          <p class="product-tagline">Embed on a website</p>
+          <div class="embed-section-box">
+            
+            <div class="flex-box-parent">
+
+              <div class="flex-column-one center-text embed-overlay">
+
+                <div class="embed-section-icon">
+                  <img src="assets/icon-overlay.png" alt="">
+                </div>
+                <p class="h1">Overlay</p>
+                <p class="embed-section-leading">Inline purchases without leaving your site</p>
+                
+              </div>
+              <div class="flex-column-two center-text embed-embed">
+
+                <div class="embed-section-icon">
+                  <img src="assets/icon_embed.png" alt="">
+
+                </div>
+                <p class="h1">Embed</p>
+                <p class="embed-section-leading">Inline purchases without leaving your site</p>
+              </div>
+              </div>  
+              
+              <p>Button text:</p>
+
+              <select class="filter-select embed-select" name="sort" id="sort">
+                <option value="#">Buy my Product</option>
+                <option value="#">Contact</option>
+              </select>
+
+              <div class="checkbox-box">
+                <input type="checkbox" name="" id="">
+                <p>Auto-trigger the payment form</p>
+              </div>
+              <div class="checkbox-box">
+                <input type="checkbox" name="" id="">
+                <p>Allow single-product purchases only</p>
+              </div>
+
+              <button class="btn btn-red buy-button">Buy my Product</button>
+              <p class="center-text embed-code-box-heading">Copy and paste this code into your website</p>
+              <p class="center-text embed-code-box-lead">We highly recommend you have an SSL certificate
+                to increase buyer confidence.</p>
+
+                <div class="code-box">
+
+                </div>
+                <div class="embed-btn-box">
+                <button class="btn btn-arrow btn-embed-add"><i class="fas fa-file-medical fa-2x"></i></button>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="flex-row">
+            <p class="h1">Profile</p>
+            <p class="flex-row-link"><a href="#">  Learn more</a></p>
+          </div>
+
+          <div class="flex-row">
+            <p class="product-tagline">Shown on your creator profile</p>
+            <label class="switch">
+              <input type="checkbox" checked>
+              <span class="slider round"></span>
+            </label>
+          </div>
+
+          <div class="flex-row">
+            <p class="h1">Discover</p>
+            <p class="flex-row-link">Learn more</p>
+          </div>
+
+          <p class="product-tagline">Tags</p>
+          <div class="tag-input">
+            <input type="text" name="" id="" placeholder="Begin typing to add a tag">
+
+          </div>
+
+          <p class="product-tagline">Setting</p>
+
+          <div class="flex-row flex-row-small">
+            <p>Display your product's 1-5 star rating to prospective customers</p>
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider round"></span>
+            </label>
+          </div>
+
+          <div class="flex-row flex-row-small">
+            <p>This product contains content meant only for adults, including the preview</p>
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider round"></span>
+            </label>
+          </div>
+        </div>
+        <!-- END column-one -->
+     
+      <div class="flex-column-two">
+
+        <div class="cover-image-box">
+          <img src="assets/published-product-1.jpg" alt="">
+            
+          <div class="flex-box-parent">
+              <div class="flex-column-one center-text cover-image-info">
+                <p class="h1">Cover Image</p>
+                <p class="cover-image-box-by">By:  <span> Taylor.K</span></p>
+                <img src="assets/stars2.png" alt="">
+                <input type="text" name="" id="" placeholder="This product is short..">
+              </div>
+            <div class="flex-column-two cover-image-info">
+
+              <div class="flex-box-parent cover-image-btns">
+                <button class="btn btn-dark btn-arrow cover-image-btn-price">$10</button>
+                <button class="btn btn-red btn-arrow">I want this!</button>
+               
+
+              </div>
+              <input class="cover-image-input-long" type="text" name="" id="" placeholder="But this product..">
+            </div> 
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  </div>
+</section>
+
+  </main>
+
+
+  <!-- Footer -->
+
+  <footer>
+    <div class="container">
+      <div class="footer-logo">
+        <a style="border: 2px solid transparent;" href="index.html">
+          <img src="assets/logo.png" alt="Jemsplash site logo" />
+        </a>         </div>
+      <div class="footer-links split">
+         <ul class="links-a">
+
+          <li><a href="#">Quick Links</a></li>
+          <li><a href="analytics-tips.html">Blog</a></li>
+          <li><a href="course.html">Features</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+        </ul>
+
+        <ul class="links-b">
+
+          <li><a href="#">Discover</a></li>
+          <li><a href="listing.html">Everything</a></li>
+          <li><a href="#">Apps & Software</a></li>
+          <li><a href="#">Crafts & DIY</a></li>
+          <li><a href="#">Design & Tech Products</a></li>
+          <li><a href="#">Film & Video</a></li>
+        </ul>
+
+        <ul class="links-c">
+          <li><a href="#"></a></li>
+          <li><a href="#">Education</a></li>
+          <li><a href="#">Food & Cooking</a></li>
+          <li><a href="#">Merchandise</a></li>
+          <li><a href="#">Photography</a></li>
+          <li><a href="#">Drawing & Painting</a></li>
+        </ul>
+
+        <ul class="links-d">
+
+          <li><a href="#"></a></li>
+          <li><a href="#">Animation</a></li>
+          <li><a href="#">Books & writing</a></li>
+          <li><a href="#">Comics</a></li>
+          <li><a href="#">Podcasts & Audiobooks</a></li>
+          <li><a href="#">Music & Sound Design</a></li>
+        </ul>
+
+        <ul class="links-e">
+          <li><a href="#">Contact</a></li>
+          <li><a href="#"><i class="fas fa-map-marker-alt"></i>123 Mainstreet Newyork</a></li>
+          <li><a href="#"><i class="fas fa-envelope"></i> abcd@gmail.com</a></li>
+          <li><a href="#"><i class="fas fa-phone-volume"></i> 123-456-789</a></li>
+
+        </ul>
+
+      </div>
+    </div>
+    </div>
+
+
+    <div class="footer-mini">
+      <div class="mini-a">
+        <p>&copy 2020 Jemsplash, Inc</p>
+        <img src="/assets/lang_en.png" alt="">
+
+        <select name="Language" id="find" class="">
+          <option value="discover">Eng</option>
+
+        </select>
+      </div>
+      <div class="mini-b">
+        <ul>
+          <li><a href="#">Help</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Term Of Use</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+
+
+</body>
+
+</html>

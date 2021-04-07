@@ -1,0 +1,796 @@
+/* font-family: 'Raleway', sans-serif;
+font-family: 'Montserrat', sans-serif; */
+
+/*----------VARIABLES----------*/
+:root {
+  --clr-primary: #fff;
+  --clr-secondary: #fc0404;
+  --clr-heading: #362f2d;
+  --clr-dark-btn: #1f1f1f;
+
+  --spacer: 2rem;
+}
+
+/*---------- CSS RESET----------*/
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+  color: inherit;
+  display: inline-block;
+}
+
+a:hover {
+  border-bottom: 2px solid var(--clr-secondary);
+  transition: border 0.5s;
+}
+
+form,
+input,
+button,
+button:focus,
+select {
+  font-family: inherit;
+  border: 0;
+  font: inherit;
+  margin: 0 0.2rem;
+}
+
+button:focus,
+button:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* 
+button:active {
+  transform: translateY(4px) !important;
+} */
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+.cancel-margin {
+  margin: 0 !important;
+}
+
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+  -webkit-tap-highlight-color: transparent; /* For some Androids */
+}
+
+/*---------- General Styles----------*/
+
+html {
+  height: 100%;
+}
+body {
+  font-family: "Raleway", sans-serif;
+  background-color: var(--clr-primary);
+  margin: 0 auto;
+  max-width: 1140px;
+  padding: 0.5rem;
+  height: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif;
+}
+
+.btn {
+  padding: 0.7rem 1rem;
+  outline: 0;
+  border-radius: 25px;
+}
+
+.btn-dark {
+  background-color: var(--clr-dark-btn);
+  color: var(--clr-primary);
+  cursor: pointer;
+}
+
+.btn-red {
+  background-color: var(--clr-secondary);
+  color: var(--clr-primary);
+  cursor: pointer;
+}
+
+.btn-arrow {
+  border-radius: 4px;
+  padding: 0.6rem;
+  cursor: pointer;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.remove-p {
+  padding: 0 !important;
+}
+
+.remove-m {
+  margin: 0 !important;
+}
+
+header {
+  @supports (-webkit-appearance: none) {
+    .os-android & {
+      min-height: calc(100vh - 56px);
+    }
+  }
+}
+
+/*---------- Layout Styles----------*/
+
+.split {
+  display: flex;
+  flex-direction: column;
+}
+
+.split > * {
+  flex-basis: 100%;
+}
+
+.split > * + * {
+  margin-left: 1rem;
+}
+
+@media (min-width: 40em) {
+  .split {
+    flex-direction: row;
+  }
+
+  .container {
+    padding: 0 3rem;
+  }
+}
+
+.my-2 {
+  margin: 2rem 0 !important;
+}
+
+/*---------- Home Page Styles----------*/
+
+section {
+  margin: var(--spacer) 0;
+}
+
+.openMenu,
+.mainMenu,
+.closeMenu {
+  display: none;
+  cursor: pointer;
+}
+
+.home-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.nav-primary ul {
+  display: flex;
+}
+
+.nav-primary ul li {
+  margin-right: 0.8rem;
+}
+
+.user-setup a:first-child {
+  margin-right: 0.5rem;
+}
+
+.user-setup a:hover {
+  border: 2px solid transparent;
+
+}
+
+
+@media (min-width: 950px) {
+}
+
+.course-stats-review {
+  font-family: "Montserrat", sans-serif;
+}
+
+.course-stats-review p:first-child {
+  font-size: 1.5rem;
+}
+
+.course-stats-review > * {
+  margin: 0.2rem 0;
+}
+
+.course-stats-parent {
+  display: flex;
+  margin: 2rem 0;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.08);
+}
+
+.course-stats-parent > * {
+  flex-basis: 100%;
+}
+
+.course-stats-card {
+  display: flex;
+}
+
+.course-stats-card > * {
+  flex-basis: 100%;
+}
+
+.course-stats-details {
+  max-width: 10rem;
+  margin-left: 2rem;
+  align-self: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.course-stats-details > * {
+  margin: 1rem 0;
+}
+
+.course-stats-details p:first-of-type {
+  font-size: 1.2rem;
+}
+
+.course-stats-review {
+  flex-basis: 70%;
+  align-self: center;
+}
+
+.course-stats-img img {
+  height: 18rem;
+  object-fit: cover;
+}
+
+.course-stats-img {
+  max-width: 20rem;
+  padding: 1rem;
+}
+
+.stats-bar {
+  height: 1.5rem;
+  border-radius: 10px;
+  max-width: 18rem;
+  background-color: #f5f5f5;
+  position: relative;
+}
+
+.progressbar {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1.5rem;
+  background-color: #fdca66;
+  border-radius: 10px;
+}
+
+.course-stats-bars {
+  margin: 0.4rem 0;
+}
+
+.w-90 {
+  max-width: 90%;
+}
+
+.w-70 {
+  max-width: 70%;
+}
+
+.w-50 {
+  max-width: 50%;
+}
+
+.w-30 {
+  max-width: 30%;
+}
+
+.w-20 {
+  max-width: 20%;
+}
+
+.course-descrp p:nth-child(1) {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin: 3rem 0 1rem 0;
+}
+
+.course-descrp p:nth-child(4) {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.course-descrp p:nth-child(2),
+.course-descrp p:nth-child(3) {
+  line-height: 1.5rem;
+  margin: 1rem 0;
+}
+
+.course-descrp ul {
+  list-style-type: disc;
+  padding-left: 1rem;
+}
+
+.discover_tagbox {
+  margin: 3rem 0 2rem 0;
+}
+
+.discover_tagbox h1 {
+  font-weight: 400;
+}
+
+.more-products {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.more-prodcuts-box {
+  border: 1px solid #e2e2e2;
+  padding: 1.5rem;
+}
+
+.caro_item {
+  display: flex;
+  border: 1px solid transparent;
+  padding: 1rem 1rem;
+  border-radius: 15px;
+  max-width: 22rem;
+  margin-bottom: 1.5rem;
+}
+
+.splide__pagination__page {
+  background: rgb(148, 147, 147) !important;
+}
+
+.splide__pagination__page.is-active {
+  background: rgb(0, 0, 0) !important;
+}
+
+.caro_item:hover {
+  background-color: red;
+  color: white;
+}
+
+.caro_item img {
+  margin-right: 1rem;
+  align-self: flex-end;
+}
+
+.make-red {
+  filter: invert(11%) sepia(81%) saturate(7313%) hue-rotate(1deg)
+    brightness(102%) contrast(112%);
+}
+
+.make-white {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg)
+    brightness(102%) contrast(102%);
+}
+
+.make-black {
+  filter: invert(0%) sepia(8%) saturate(7500%) hue-rotate(355deg)
+    brightness(103%) contrast(110%);
+}
+
+.caro_item ul li {
+  margin: 0.2rem 0;
+}
+
+.caro_item ul li:nth-child(1) {
+  font-weight: 600;
+}
+
+.best-selling-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.service-card-parent {
+  display: flex;
+  justify-content: space-between;
+}
+
+.service-card-parent > * {
+  flex-basis: 100%;
+}
+
+.service-card {
+  display: flex;
+  padding: 0.5rem;
+  margin: 0 1rem;
+  margin-bottom: 3rem;
+
+  border-radius: 10px;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.15);
+}
+
+.service-card-info {
+  margin: 0rem 1rem;
+  max-width: 14rem;
+}
+
+@media (min-width: 950px) {
+  .service-card-info {
+    min-width: 10rem;
+  }
+}
+
+.service-card-info > * {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+
+.service-card-buttons {
+  font-family: "Montserrat", sans-serif;
+
+  margin-top: 2rem;
+}
+.service-card-buttons > * {
+  width: 100%;
+  display: block;
+  margin: 0.5rem 0;
+}
+
+.service-card-img {
+  max-width: 15rem;
+  height: 20rem;
+  padding: 0.5rem;
+}
+
+.service-card-img img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.splide__arrow--prev {
+  left: -3rem !important;
+}
+
+.splide__arrow--next {
+  right: -3rem !important;
+}
+
+.splide__arrow {
+  background-color: rgb(255, 255, 255) !important;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.19) !important;
+}
+
+.splide__arrow:focus {
+  background-color: rgb(255, 255, 255) !important;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.19) !important;
+}
+
+.links-a li:first-child,
+.links-b li:first-child,
+.links-c li:first-child,
+.links-d li:first-child,
+.links-e li:first-child {
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.links-a li,
+.links-b li,
+.links-c li,
+.links-d li,
+.links-e li {
+  margin-bottom: 0.2rem;
+  font-size: 0.9rem;
+}
+
+.footer-logo {
+  margin-bottom: 1rem;
+}
+
+.fas {
+  margin-right: 0.5rem;
+}
+
+.footer-links {
+  margin: 2rem 0;
+}
+
+.footer-mini {
+  margin: 0.2rem 0;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #8080805c;
+  padding: 0.3rem 0;
+}
+
+.mini-a {
+  display: flex;
+  align-items: center;
+}
+
+.mini-a p {
+  margin-right: 2rem;
+}
+
+.mini-b ul {
+  display: flex;
+}
+.mini-b ul li {
+  margin-right: 1rem;
+}
+
+hr {
+  color: inherit;
+}
+
+/*---------- MEDIA QUERIES----------*/
+
+/* Original */
+
+@media only screen and (max-width: 600px) and (min-width: 200px) {
+  .nav-primary,
+  .user-setup {
+    display: none;
+  }
+
+  .mainMenu {
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: top 1s ease;
+    display: none;
+    background: linear-gradient(to right, #ffffff, #ffffff),
+      url("/assets/logo.png");
+    background-repeat: no-repeat;
+  }
+
+  .mainMenu ul li {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+  }
+
+  .mainMenu ul li:nth-child(1) {
+    margin-top: 1rem;
+  }
+  .mainMenu .closeMenu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: red;
+  }
+  .openMenu {
+    display: block;
+    position: absolute;
+    right: 20px;
+    font-size: 2rem;
+    color: red;
+  }
+
+  .split {
+    display: block !important;
+    text-align: center !important;
+    padding: 0 2rem !important;
+  }
+
+  .footer-mini,
+  .mini-a,
+  .mini-b {
+    flex-direction: column !important;
+  }
+
+  .mini-a p,
+  .mini-a img,
+  .mini-a select {
+    margin: 0.5rem 0 !important;
+  }
+
+  .mini-b ul {
+    justify-content: space-around !important;
+  }
+
+  .footer-logo {
+    text-align: center !important;
+  }
+}
+
+/* MID Screen devices */
+
+@media only screen and (max-width: 992px) and (min-width: 470px) {
+  .course-stats-details {
+    padding-right: 2rem;
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .course-stats-review {
+    flex-basis: 55%;
+  }
+
+  .caro_item {
+    flex-direction: column;
+  }
+
+  .best-selling-box {
+    align-items: center;
+  }
+
+  .best-selling-nav > * {
+    margin: 0 auto;
+  }
+
+  .service-card-parent {
+  }
+
+  .service-card {
+    flex-direction: column;
+  }
+
+  .discover_tagbox {
+    margin: 1rem;
+  }
+
+  .discover_tagbox h1 {
+    font-size: 1.5rem;
+  }
+
+  .caro_item {
+    display: block;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .service-card-parent {
+    align-items: center;
+  }
+}
+
+/* Extremely small devices  */
+@media only screen and (max-width: 470px) and (min-width: 220px) {
+  .course-stats-parent,
+  .course-stats-card {
+    flex-direction: column;
+  }
+
+  .course-stats-img {
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .course-stats-review {
+    align-self: auto;
+  }
+
+  .course-stats-review > img {
+    text-align: center;
+  }
+
+  .course-stats-lead {
+    text-align: center;
+  }
+
+  .service-card-img {
+    height: auto;
+    padding: 0;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .service-card-img img {
+    height: 20rem;
+  }
+
+  .service-card {
+    display: flex;
+    padding: 0.1rem;
+    margin: 0;
+    margin-bottom: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.15);
+  }
+
+  .course-descrp {
+    padding: 0 1rem;
+  }
+
+  .course-stats-review > * {
+    margin: 0.5rem 0;
+    padding: 0 1rem;
+  }
+
+  .service-card-info {
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .service-card-info > * {
+    text-align: center;
+    margin: 1rem auto;
+  }
+
+  .course-stats-details {
+    align-self: auto;
+    max-width: 100%;
+    padding: 0 1rem;
+    margin: 0;
+  }
+
+  .stats-bar,
+  .progressbar {
+    height: 0.6rem;
+  }
+
+  .caro_item {
+    flex-direction: column;
+  }
+
+  .best-selling-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .best-selling-nav > * {
+    margin: 0 auto;
+  }
+
+  .service-card-parent {
+    flex-direction: column;
+  }
+
+  .service-card {
+    flex-direction: column;
+  }
+
+  .discover_tagbox {
+    margin: 1rem;
+  }
+
+  .discover_tagbox h1 {
+    font-size: 1.5rem;
+  }
+
+  .caro_item {
+    display: block;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .service-card-parent {
+    align-items: center;
+  }
+}

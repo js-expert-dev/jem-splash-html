@@ -1,0 +1,33 @@
+.accordion {
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  transition: 0.4s;
+  background-color: inherit;
+}
+
+.active,
+.accordion:hover {
+}
+
+.accordion:after {
+  content: "\276E";
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+  transform: rotate(270deg);
+}
+
+.active:after {
+  content: "\276E";
+  transform: rotate(90deg);
+}
+
+.panel {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}

@@ -1,0 +1,517 @@
+/* font-family: 'Raleway', sans-serif;
+font-family: 'Montserrat', sans-serif; */
+
+/*----------VARIABLES----------*/
+:root {
+  --clr-primary: #fff;
+  --clr-secondary: #fc0404;
+  --clr-heading: #362f2d;
+  --clr-dark-btn: #1f1f1f;
+
+  --spacer: 2rem;
+}
+
+/*---------- CSS RESET----------*/
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+  color: inherit;
+  display: inline-block;
+}
+
+a:hover {
+  border-bottom: 2px solid var(--clr-secondary);
+  transition: border 0.5s;
+}
+
+form,
+input,
+button,
+button:focus,
+select {
+  font-family: inherit;
+  border: 0;
+  font: inherit;
+  margin: 0 0.2rem;
+}
+
+button:focus,
+button:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+button:active {
+  transform: translateY(4px) !important;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+.cancel-margin {
+  margin: 0 !important;
+}
+
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+  -webkit-tap-highlight-color: transparent; /* For some Androids */
+}
+
+/*---------- General Styles----------*/
+
+body {
+  font-family: "Raleway", sans-serif;
+  background-color: var(--clr-primary);
+  margin: 0 auto;
+  max-width: 1140px;
+  padding: 0.5rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif;
+}
+
+.btn {
+  padding: 0.7rem 1rem;
+  outline: 0;
+  border-radius: 25px;
+}
+
+.btn-dark {
+  background-color: var(--clr-dark-btn);
+  color: var(--clr-primary);
+  cursor: pointer;
+}
+
+.center-text {
+  text-align: center;
+}
+
+/*---------- Layout Styles----------*/
+
+.split {
+  display: flex;
+  flex-direction: column;
+}
+
+.split > * {
+  flex-basis: 100%;
+}
+
+.split > * + * {
+  margin-left: 1rem;
+}
+
+/*---------- Home Page Styles----------*/
+
+.openMenu,
+.mainMenu,
+.closeMenu {
+  display: none;
+  cursor: pointer;
+}
+
+.home-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.nav-primary ul {
+  display: flex;
+}
+
+.nav-primary ul li {
+  margin-right: 0.8rem;
+}
+
+.user-setup a:first-child {
+  margin-right: 0.5rem;
+}
+
+.user-setup a:hover {
+  border: 2px solid transparent;
+}
+
+.links-a li:first-child,
+.links-b li:first-child,
+.links-c li:first-child,
+.links-d li:first-child,
+.links-e li:first-child {
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.links-a li,
+.links-b li,
+.links-c li,
+.links-d li,
+.links-e li {
+  margin-bottom: 0.2rem;
+  font-size: 0.9rem;
+}
+
+.footer-logo {
+  margin-bottom: 1rem;
+}
+
+.fas {
+  margin-right: 0.5rem;
+}
+
+.footer-links {
+  margin: 2rem 0;
+}
+
+.footer-mini {
+  margin: 0.2rem 0;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #8080805c;
+  padding: 0.3rem 0;
+}
+
+.mini-a {
+  display: flex;
+  align-items: center;
+}
+
+.mini-a p {
+  margin-right: 2rem;
+}
+
+.mini-b ul {
+  display: flex;
+}
+.mini-b ul li {
+  margin-right: 1rem;
+}
+
+/*---------- LOGIN PAGE ----------*/
+
+main {
+  margin: 0 0 2rem 0;
+}
+.page-login-btn {
+  padding: 0.5rem 2rem;
+}
+
+.login-hero {
+  background: linear-gradient(to right, #fc0404a9, #fd0404a2),
+    url("/assets/login_bg.jpg");
+  background-size: cover;
+  background-position: left center;
+
+  padding: 4rem 0;
+}
+
+.card {
+  background-color: #fff;
+
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0px 1rem 1.5rem rgba(0, 0, 0, 0.2);
+}
+
+.login-container {
+  padding: 0 12rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.active {
+  color: var(--clr-secondary);
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 1rem 1rem;
+  margin: 0.1rem auto;
+}
+
+.login-form input[type="email"]:focus,
+.login-form input[type="password"]:focus {
+  border: 1px solid red;
+  transition: all 0.2s;
+}
+
+.login-form > * {
+  min-width: 30rem;
+}
+
+.login-inner-container {
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+.leading {
+  margin: 2rem 0 1rem 0;
+  font-size: 2rem;
+  text-align: center;
+  color: var(--clr-heading);
+}
+
+.not-robot,
+.social-logins {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4.5rem;
+  margin: 0.5rem 0;
+}
+.not-robot img {
+  max-width: 15rem;
+}
+
+.not-robot a,
+.sign-up-link,
+.tc-para a {
+  color: var(--clr-secondary);
+  cursor: pointer;
+}
+
+.btn-submit {
+  background-color: var(--clr-secondary);
+  color: var(--clr-primary);
+  display: inline-block;
+  border-radius: 4px;
+  padding: 1rem 4.5rem;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  max-width: 30rem;
+  margin: 0.8rem auto;
+  cursor: pointer;
+}
+
+.sign-up-para {
+  margin: 1rem 0;
+}
+
+.tc-para {
+  margin: 1rem 5rem;
+  font-weight: bold;
+}
+
+/*---------- MEDIA QUERIES----------*/
+
+@media (min-width: 40em) {
+  .split {
+    flex-direction: row;
+  }
+
+  .container {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width: 770px) {
+  .split {
+    flex-direction: column;
+  }
+
+  .links-a {
+    margin-left: 1rem !important;
+  }
+
+  .links-a,
+  .links-b,
+  .links-c,
+  .links-d {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Original */
+@media (max-width: 360px) {
+  .split {
+    display: block !important;
+    text-align: center !important;
+    padding: 0 2rem !important;
+  }
+
+  .footer-logo {
+    margin-left: 4rem !important;
+  }
+}
+
+@media only screen and (max-width: 800px) and (min-width: 200px) {
+  .nav-primary,
+  .user-setup {
+    display: none;
+  }
+
+  .mainMenu {
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: top 1s ease;
+    display: none;
+    background: linear-gradient(to right, #ffffff, #ffffff),
+      url("/assets/logo.png");
+    background-repeat: no-repeat;
+  }
+
+  .mainMenu ul li {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+  }
+
+  .mainMenu ul li:nth-child(1) {
+    margin-top: 1rem;
+  }
+  .mainMenu .closeMenu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: red;
+  }
+  .openMenu {
+    display: block;
+    position: absolute;
+    right: 20px;
+    font-size: 2rem;
+    color: red;
+  }
+
+  .login-container {
+    padding: 0 !important;
+    width: 80% !important;
+    margin: 0 auto;
+  }
+
+  .leading {
+    font-size: 1.5rem;
+  }
+
+  .login-form > * {
+    min-width: 20rem !important;
+  }
+
+  .not-robot,
+  .social-logins {
+    display: block;
+  }
+
+  .not-robot img {
+    max-width: 100% !important;
+  }
+
+  .social-logins {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .social-logins input {
+    margin: 0.5rem 0;
+  }
+
+  .split {
+    display: block !important;
+    text-align: center !important;
+    padding: 0 2rem !important;
+  }
+
+  .footer-mini,
+  .mini-a,
+  .mini-b {
+    flex-direction: column !important;
+  }
+
+  .mini-a p,
+  .mini-a img,
+  .mini-a select {
+    margin: 0.5rem 0 !important;
+  }
+
+  .mini-b ul {
+    justify-content: space-around !important;
+  }
+
+  .footer-logo {
+    text-align: center !important;
+  }
+
+  .tc-para {
+    margin: 1rem 0 !important;
+    font-weight: bold;
+    text-align: center;
+    padding: 0 1rem;
+  }
+}
+
+/* Extremely small devices  */
+@media only screen and (max-width: 420px) and (min-width: 220px) {
+  .login-form > * {
+    min-width: 5rem !important;
+    padding: 0;
+  }
+
+  .btn-submit {
+    padding: 1rem 2rem;
+  }
+
+  .login-form input[type="email"],
+  .login-form input[type="password"] {
+    margin: 0;
+  }
+
+  .not-robot {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .not-robot img {
+    max-width: 12rem !important;
+  }
+  .social-logins input {
+    max-width: 100%;
+  }
+
+  .tc-para {
+    margin: 1rem 0 !important;
+    font-weight: bold;
+    text-align: center;
+    padding: 0 1rem;
+  }
+}

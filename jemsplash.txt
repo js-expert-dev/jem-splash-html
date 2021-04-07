@@ -1,0 +1,184 @@
+UPDATE: Jemsplash v1.1  (Frontend)
+
+=======================================
+CHANGE LOG:
+=======================================
+
+
+->  Fixed all pages as suggested in the UI/UX Report
+
+==================================================================================
+==================================================================================
+
+
+
+
+
+
+
+Jemsplash v1.0  (Frontend)
+
+=======================================
+CHANGE LOG:
+=======================================
+
+
+->   Added all 42 pages (frontend only)
+
+->   Pages are all linked, where possible. (Some buttons such as forms etc will only work after backend support)
+
+->   all pages are hosted on my private server so their link for your in-browser demo are availabe. (Updated in your Google Sheet)
+
+
+->   all pages are mobile ready (i.e. they can run on all devices big or small)
+
+===================================================================================
+
+LINKS DEMO
+
+=====================================================================================
+
+
+1. Home page 
+https://discover-page.netlify.app/
+
+2. Login Page
+https://discover-page.netlify.app/login
+
+3. Signup Page
+https://discover-page.netlify.app/signup
+
+4. Discover Page
+https://discover-page.netlify.app/discover
+
+5. Library Page
+https://discover-page.netlify.app/library
+
+6. Pricing Page
+https://discover-page.netlify.app/pricing
+
+7. Specific (upsell) Page
+https://discover-page.netlify.app/specific
+
+8. Course Page (Feature page)
+https://discover-page.netlify.app/course
+
+9. Course Preview Page
+https://discover-page.netlify.app/course_preview
+
+
+10. Listing Page
+https://discover-page.netlify.app/listing
+
+11. Workflow Page
+https://discover-page.netlify.app/workflow
+
+12. new-workflow Page
+https://discover-page.netlify.app/new-workflow
+
+13. add-workflow Page
+https://discover-page.netlify.app/add-workflow
+
+14. Cusomter Page
+https://discover-page.netlify.app/customer
+
+15. Customer-search Page
+https://discover-page.netlify.app/customer-search
+
+16. Customer-only-workflow Page
+https://discover-page.netlify.app/customer-only-workflow
+
+17. Customer-download
+https://discover-page.netlify.app/customer-download
+
+
+
+
+18. Customer-Filter
+https://discover-page.netlify.app/customer-filter
+
+19. Analytics tips
+https://discover-page.netlify.app/analytics-tips.html
+.
+
+20. Analytics invites
+https://discover-page.netlify.app/analytics-invites
+
+21. Analytics
+https://discover-page.netlify.app/analytics.html
+
+
+
+22. Profile user Changes
+https://discover-page.netlify.app/profile-user-changes
+
+23.Profile user (Product) Changes
+https://discover-page.netlify.app/profile-user-product
+
+24. Profile user (Posts) Changes
+https://discover-page.netlify.app/profile-user-posts.html
+
+25. Profile Pro user Changes
+https://discover-page.netlify.app/profile-user-pro-changes.html
+
+26. Profile - Style Changes
+https://discover-page.netlify.app/profile-style-changes.html
+
+27. Profile - Profile picture Changes
+https://discover-page.netlify.app/profile-picture-changes.html
+
+28. Profile - Follow form Changes
+https://discover-page.netlify.app/profile-follow-form-changes.html
+
+29. Profile - Connections Changes
+https://discover-page.netlify.app/profile-connection-changes.html
+
+30. My-Profile Changes
+https://discover-page.netlify.app/myprofile-changes.html
+
+
+31. Share
+https://discover-page.netlify.app/published-share
+
+32. Published (LINKED)
+https://discover-page.netlify.app/published-published.html
+
+
+33. Published - New Post
+https://discover-page.netlify.app/published-new-post.html
+
+
+34. Published - Preview
+https://discover-page.netlify.app/published-preview
+
+35. Publish your Products
+https://discover-page.netlify.app/published-your-product
+
+36. Product
+http://discover-page.netlify.app/published-product
+
+
+
+37. Checkout
+https://discover-page.netlify.app/published-checkout
+
+38. Settings
+https://discover-page.netlify.app/settings
+
+39. Settings Password
+https://discover-page.netlify.app/settings-password
+
+40. Settings - Payout
+https://discover-page.netlify.app/settings-payout
+
+
+
+41. Settings - Advanced
+https://discover-page.netlify.app/settings-advanced
+
+42. setting kpi
+https://discover-page.netlify.app/settings-kpi
+
+
+
+ALL 42 pages finished!

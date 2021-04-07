@@ -1,0 +1,1039 @@
+/* font-family: 'Raleway', sans-serif;
+font-family: 'Montserrat', sans-serif; */
+
+/*----------VARIABLES----------*/
+:root {
+  --clr-primary: #fff;
+  --clr-secondary: #fc0404;
+  --clr-heading: #362f2d;
+  --clr-dark-btn: #1f1f1f;
+
+  --spacer: 2rem;
+}
+
+/*---------- CSS RESET----------*/
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+  color: inherit;
+  display: inline-block;
+}
+
+a:hover {
+  border-bottom: 2px solid var(--clr-secondary);
+  transition: border 0.5s;
+}
+
+form,
+input,
+button,
+button:focus,
+select {
+  font-family: inherit;
+  border: 0;
+  font: inherit;
+  margin: 0 0.2rem;
+}
+
+button:focus,
+button:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+button > a:hover {
+  border: 2px solid transparent;
+}
+
+/* 
+button:active {
+  transform: translateY(4px) !important;
+} */
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+.cancel-margin {
+  margin: 0 !important;
+}
+
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+  -webkit-tap-highlight-color: transparent; /* For some Androids */
+}
+
+/*---------- General Styles----------*/
+
+html {
+  height: 100%;
+}
+body {
+  font-family: "Raleway", sans-serif;
+  background-color: var(--clr-primary);
+  margin: 0 auto;
+  max-width: 1140px;
+  padding: 0.5rem;
+  height: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif;
+}
+
+.btn {
+  padding: 0.7rem 1rem;
+  outline: 0;
+  border-radius: 25px;
+}
+
+.btn-dark {
+  background-color: var(--clr-dark-btn);
+  color: var(--clr-primary);
+  cursor: pointer;
+}
+
+.btn-red {
+  background-color: var(--clr-secondary);
+  color: var(--clr-primary);
+  cursor: pointer;
+}
+
+.btn-arrow {
+  border-radius: 4px;
+  padding: 0.6rem;
+  cursor: pointer;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.remove-p {
+  padding: 0 !important;
+}
+
+.remove-m {
+  margin: 0 !important;
+}
+
+header {
+  @supports (-webkit-appearance: none) {
+    .os-android & {
+      min-height: calc(100vh - 56px);
+    }
+  }
+}
+
+/*---------- Layout Styles----------*/
+
+.split {
+  display: flex;
+  flex-direction: column;
+}
+
+.split > * {
+  flex-basis: 100%;
+}
+
+.split > * + * {
+  margin-left: 1rem;
+}
+
+@media (min-width: 40em) {
+  .split {
+    flex-direction: row;
+  }
+
+  .container {
+    padding: 0 3rem;
+  }
+}
+
+.my-2 {
+  margin: 2rem 0 !important;
+}
+
+.mb-2 {
+  margin-bottom: 2rem !important;
+}
+
+.mb-4 {
+  margin-bottom: 4rem !important;
+}
+
+/*---------- Home Page Styles----------*/
+
+section {
+  margin: var(--spacer) 0;
+}
+
+.openMenu,
+.mainMenu,
+.closeMenu {
+  display: none;
+  cursor: pointer;
+}
+
+.home-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-avatar {
+  border-radius: 100%;
+  width: 2.5rem;
+  padding: 0.6rem;
+  background-color: #e2e2e2;
+}
+
+.active {
+  color: var(--clr-secondary);
+}
+
+.nav-primary ul {
+  display: flex;
+}
+
+.nav-primary ul li {
+  margin-right: 0.8rem;
+}
+
+.user-setup a:first-child {
+  margin-right: 0.5rem;
+}
+
+.workflow-nav {
+  position: relative;
+}
+.workflow-nav-menu {
+  display: flex;
+}
+
+.workflow-nav ul li {
+  margin-right: 3rem;
+}
+
+.workflow-nav ul button {
+  margin-left: auto;
+}
+
+.workflow-dropdown-infocard {
+  border-width: 1px;
+  border-color: rgb(231, 231, 231);
+  border-style: solid;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 4px 21px 0px rgba(0, 0, 0, 0.03);
+
+  padding: 1rem;
+  max-width: 25rem;
+  position: absolute;
+  right: 0;
+  top: 4rem;
+}
+
+.workflow-dropdown-infocard::before {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+
+  border-top: 1px solid rgb(231, 231, 231);
+  border-left: 1px solid rgb(231, 231, 231);
+  top: 13px;
+  left: 75%;
+  margin-left: -25px;
+  content: "";
+
+  transform: rotate(45deg);
+  margin-top: -25px;
+}
+
+.workflow-dropdown-infocard h4 {
+  margin-bottom: 2rem;
+}
+
+.workflow-dropdown-infocard p {
+  padding-right: 2rem;
+  margin-bottom: 1rem;
+}
+
+.workflow-dropdown-infocard ul li:before {
+  content: "✓";
+  font-weight: bold;
+  margin-right: 0.8rem;
+}
+
+.workflow-dropdown-infocard ul li {
+  margin-bottom: 0.5rem;
+}
+
+.workflow-dropdown-infocard button {
+  margin: 1rem 0;
+}
+
+.workflow-container {
+  padding: 10rem;
+}
+
+.site-logoo {
+  display: none;
+}
+
+.workflow-audience {
+}
+
+.workflow-audience h3 {
+  margin-top: 3rem;
+}
+.workflow-choice-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.workflow-choice-item input {
+  margin-left: 5rem;
+}
+
+.workflow-choice-item p {
+  font-weight: 600;
+}
+
+.workflow-name input[type="text"] {
+  border: 1px solid #e2e2e2;
+  border-radius: 4px;
+  padding: 1rem 1rem;
+  margin: 0.1rem auto;
+  width: 100%;
+}
+
+.workflow-name input[type="text"]:focus {
+  border: 1px solid #adacac;
+}
+
+.workflow-info {
+  color: #c1baba;
+}
+
+.workflow-info .fas {
+  color: #7c7c7c;
+}
+.workflow-info-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem;
+  position: relative;
+}
+
+.workflow-info-item div {
+  width: 12px;
+  height: 12px;
+  border: 1px solid #767676;
+  border-radius: 100%;
+  background-color: #ffffff;
+  z-index: 2;
+}
+
+.workflow-info-item div.active {
+  background-color: #7c7c7c;
+}
+
+.workflow-info-item:nth-child(3)::after {
+  border-top: 1px solid #e0d6d6;
+  content: "";
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  top: 5px;
+}
+
+.workflow-data {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 2rem 0;
+}
+
+.workflow-nav-special {
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+.workflow-nav-special button {
+  margin: 0;
+}
+
+.workflow-search-widget {
+  display: flex;
+  border: 1px solid rgb(174, 174, 174);
+  border-radius: 0.139in;
+  align-content: center;
+
+  color: #7c7c7c;
+  margin-left: auto;
+  position: relative;
+}
+
+.workflow-search-widget p {
+  border-right: 1px solid rgb(174, 174, 174);
+  padding: 1rem;
+}
+
+.workflow-search-widget p:last-of-type {
+  border-right: 0;
+}
+
+.buyer-box {
+  width: 16rem;
+  margin-right: 3rem;
+}
+.buyer-imgbox img {
+  border: 1px solid rgb(218, 218, 218);
+  border-radius: 0.139in;
+}
+
+.buyer-box p {
+  font-family: "Montserrat", sans-serif;
+  /* font-family: 'Montserrat', sans-serif; */
+  font-weight: 600;
+  margin: 0.8rem 0;
+}
+
+.buyer-box .leading {
+  margin-top: 0.5rem;
+}
+
+.buyer-box .buyer-name {
+  color: var(--clr-secondary);
+}
+
+.buyer-box-stats {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buyer-box-stats button {
+  font-family: "Montserrat", sans-serif;
+
+  align-self: center;
+  padding: 0.3rem;
+}
+
+.buyer-data {
+  display: flex;
+}
+
+.workflow-dropdown-search {
+  border-width: 1px;
+  border-color: rgb(231, 231, 231);
+  border-style: solid;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 4px 21px 0px rgba(0, 0, 0, 0.03);
+
+  padding: 1rem;
+  width: 22rem;
+  position: absolute;
+  right: 0rem;
+  top: 4.5rem;
+}
+
+.workflow-dropdown-search::before {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+
+  border-top: 1px solid rgb(231, 231, 231);
+  border-left: 1px solid rgb(231, 231, 231);
+  top: 13px;
+  left: 95%;
+  margin-left: -25px;
+  content: "";
+
+  transform: rotate(45deg);
+  margin-top: -21px;
+}
+
+.workflow-dropdown-search input[type="text"] {
+  border: 1px solid #e2e2e2;
+  border-radius: 4px;
+  padding: 1rem 1rem;
+  margin: 0.1rem auto;
+  width: 100%;
+}
+
+.workflow-dropdown-search input[type="text"]:focus {
+  border: 1px solid #adacac;
+}
+
+.workflow-dropdown-download {
+  border-width: 1px;
+  border-color: rgb(231, 231, 231);
+  border-style: solid;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 4px 21px 0px rgba(0, 0, 0, 0.03);
+
+  padding: 1rem;
+  width: 22rem;
+  position: absolute;
+  right: 0rem;
+  top: 4.5rem;
+}
+
+.workflow-dropdown-download::before {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+
+  border-top: 1px solid rgb(231, 231, 231);
+  border-left: 1px solid rgb(231, 231, 231);
+  top: 13px;
+  left: 66%;
+  margin-left: -25px;
+  content: "";
+
+  transform: rotate(45deg);
+  margin-top: -21px;
+}
+
+.workflow-dropdown-download h4,
+.workflow-dropdown-download p {
+  margin-bottom: 1rem;
+}
+
+.workflow-download-picker {
+  display: flex;
+  align-items: baseline;
+  padding: 1rem 0;
+}
+
+/* filter form styles */
+
+.form-item {
+  margin: 1rem 0;
+}
+
+form label {
+  display: block;
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  font-family: "Raleway", sans-serif;
+}
+
+.filter-select {
+  border: 1px solid #eeeeee;
+  width: 100%;
+  padding: 1rem 1rem;
+  color: var(--clr-heading);
+}
+
+.filter-select:active,
+.filter-select:focus,
+input[type="number"]:focus {
+  border: 1px solid #9e9d9d;
+}
+
+.price-item {
+  display: flex;
+  margin-top: 1.5rem;
+}
+
+.price-item > * {
+  flex-basis: 100%;
+}
+
+input[type="number"] {
+  border: 1px solid #e5e5e5;
+  margin: 1rem 0;
+  padding: 1rem 1rem;
+  margin-right: 1rem;
+  max-width: 8rem;
+}
+
+.price-curr {
+  border-top: 1px solid #e5e5e5;
+  border-left: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 1rem 1rem;
+}
+
+.price-curr span {
+  text-align: center;
+}
+
+.curr-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+input[type="checkbox"] {
+}
+
+.contain-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.contain-text {
+  border: 1px solid #e5e5e5;
+  padding: 0 1rem;
+  margin-right: auto;
+  margin-left: 1rem;
+  width: 4rem;
+}
+
+.contain-text p {
+  text-align: center;
+}
+
+.workflow-dropdown-filter {
+  border-width: 1px;
+  border-color: rgb(231, 231, 231);
+  border-style: solid;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 4px 21px 0px rgba(0, 0, 0, 0.03);
+
+  padding: 1rem;
+  width: 25rem;
+  position: absolute;
+  right: 0rem;
+  top: 4.5rem;
+}
+
+.workflow-dropdown-filter::before {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+
+  border-top: 1px solid rgb(231, 231, 231);
+  border-left: 1px solid rgb(231, 231, 231);
+  top: 13px;
+  left: 83%;
+  margin-left: -25px;
+  content: "";
+
+  transform: rotate(45deg);
+  margin-top: -21px;
+}
+
+.form-active-cus {
+  display: flex;
+  align-items: center;
+}
+
+.form-active-cus input {
+  margin-right: 1rem;
+}
+
+.temp-spacing {
+  margin-bottom: 20rem;
+}
+
+.workflow-only-box {
+  border-width: 1px;
+  border-color: rgb(231, 231, 231);
+  border-style: solid;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+
+  padding: 1rem;
+}
+
+.workflow-only-box h3 {
+  margin: 0;
+}
+
+/* OLD PAGE CSS */
+
+@media (min-width: 950px) {
+}
+
+.links-a li:first-child,
+.links-b li:first-child,
+.links-c li:first-child,
+.links-d li:first-child,
+.links-e li:first-child {
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.links-a li,
+.links-b li,
+.links-c li,
+.links-d li,
+.links-e li {
+  margin-bottom: 0.2rem;
+  font-size: 0.9rem;
+}
+
+.footer-logo {
+  margin-bottom: 1rem;
+}
+
+.fas {
+  margin-right: 0.5rem;
+}
+
+.footer-links {
+  margin: 2rem 0;
+}
+
+.footer-mini {
+  margin: 0.2rem 0;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #8080805c;
+  padding: 0.3rem 0;
+}
+
+.mini-a {
+  display: flex;
+  align-items: center;
+}
+
+.mini-a p {
+  margin-right: 2rem;
+}
+
+.mini-b ul {
+  display: flex;
+}
+.mini-b ul li {
+  margin-right: 1rem;
+}
+
+hr {
+  color: inherit;
+}
+
+.footer-logo a:hover {
+  border: 2px solid transparent;
+}
+
+.workflow-nav.mobile-only {
+  display: none !important;
+}
+
+/*---------- MEDIA QUERIES----------*/
+
+/* Original */
+
+@media only screen and (max-width: 600px) and (min-width: 200px) {
+  .nav-primary,
+  .user-setup {
+    display: none;
+  }
+
+  .site-logo {
+    display: none;
+  }
+
+  .site-logoo {
+    display: none;
+  }
+
+  .mainMenu {
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: top 1s ease;
+    display: none;
+    background: linear-gradient(to right, #ffffff, #ffffff),
+      url("/assets/logo.png");
+    background-repeat: no-repeat;
+  }
+
+  .mainMenu ul li {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+  }
+
+  .mainMenu ul li:nth-child(1) {
+    margin-top: 1rem;
+  }
+  .mainMenu .closeMenu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 2rem;
+    color: red;
+  }
+  .openMenu {
+    display: block;
+    position: absolute;
+    left: 20px;
+    font-size: 2rem;
+    color: red;
+  }
+
+  .split {
+    display: block !important;
+    text-align: center !important;
+    padding: 0 2rem !important;
+  }
+
+  .footer-mini,
+  .mini-a,
+  .mini-b {
+    flex-direction: column !important;
+  }
+
+  .mini-a p,
+  .mini-a img,
+  .mini-a select {
+    margin: 0.5rem 0 !important;
+  }
+
+  .mini-b ul {
+    justify-content: space-around !important;
+  }
+
+  .footer-logo {
+    text-align: center !important;
+  }
+}
+
+@media only screen and (max-width: 1050px) and (min-width: 771px) {
+}
+/* MID Screen devices */
+
+@media only screen and (max-width: 770px) and (min-width: 470px) {
+  .site-logo {
+    display: none;
+  }
+
+  .site-logoo {
+    display: block;
+    padding-top: 1rem;
+  }
+}
+
+/* Extremely small devices  */
+@media only screen and (max-width: 470px) and (min-width: 220px) {
+  .workflow-nav-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .workflow-nav ul button {
+    margin: 0;
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .workflow-nav-menu li {
+    margin-bottom: 0.6rem;
+  }
+
+  .workflow-nav ul li {
+    margin-right: 0;
+  }
+
+  .workflow-container {
+    padding: 0;
+    padding-bottom: 20rem;
+  }
+
+  .workflow-dropdown-infocard {
+    font-size: 0.8rem;
+  }
+
+  .workflow-dropdown-infocard h4 {
+    margin-bottom: 0.3rem;
+  }
+
+  .workflow-dropdown-infocard ul li {
+    margin-bottom: 0.2rem;
+  }
+
+  .workflow-dropdown-infocard ul li:before {
+    margin-right: 0.2rem;
+  }
+
+  .workflow-dropdown-infocard {
+    top: 7rem;
+    left: 2px;
+    max-width: 12rem;
+    margin: 0 auto;
+  }
+
+  .workflow-data {
+    flex-direction: column;
+  }
+
+  .workflow-name input[type="text"] {
+    padding: 0.5rem 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .workflow-name {
+    font-size: 1rem;
+  }
+
+  .workflow-info-item p:nth-child(1) {
+    padding-right: 0.5rem;
+  }
+
+  .workflow-data {
+    margin: 0;
+    align-items: center;
+  }
+
+  .workflow-info-item p:last-of-type {
+    text-align: center;
+  }
+
+  .workflow-audience {
+    align-self: stretch;
+    padding: 0 2rem;
+  }
+
+  .workflow-nav-special {
+    padding: 0 2rem;
+  }
+
+  .workflow-choice-item input {
+    margin-left: 0;
+  }
+
+  .workflow-nav-special {
+    flex-direction: column;
+  }
+
+  .buyer-data {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .buyer-box {
+    margin: 0;
+    margin-bottom: 2rem;
+  }
+
+  .workflow-search-widget {
+    margin: 1rem auto;
+  }
+
+  .workflow-nav-special li {
+    margin: 0.5rem 0;
+  }
+
+  .workflow-dropdown-search {
+    position: relative;
+    width: 13rem;
+    right: 0;
+    top: 0;
+  }
+
+  .workflow-dropdown-download {
+    position: relative;
+    width: 100%;
+    right: 0;
+    top: 0;
+  }
+
+  .workflow-dropdown-download::before {
+    top: 13px;
+    left: 36%;
+  }
+
+  .workflow-dropdown-filter {
+    position: relative;
+    width: 100%;
+    right: 0;
+    top: 0;
+  }
+
+  .workflow-dropdown-filter::before {
+    top: 13px;
+    left: 56%;
+  }
+
+  input[type="number"] {
+    max-width: auto;
+  }
+
+  .price-item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  form label {
+    font-size: 0.9rem;
+  }
+
+  /* .buyer-box {
+    width: 100%;
+  } */
+
+  .workflow-dropdown-search::before {
+    left: 85%;
+  }
+
+  .workflow-download-picker {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .workflow-dropdown-download h4,
+  .workflow-dropdown-download p {
+    text-align: center;
+  }
+
+  .workflow-nav.mobile-only {
+    display: block !important;
+    margin-top: -3rem;
+    margin-bottom: 1rem;
+  }
+
+  .workflow-nav-special.placement-change {
+    display: none !important;
+  }
+}
